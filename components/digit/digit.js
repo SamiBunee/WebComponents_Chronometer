@@ -1,6 +1,6 @@
-import style from './styles.js';
-import html from './template.js';
-import numbers from './numbers.js';
+import style from './Styles.js';
+import html from './Template.js';
+import numbers from './Numbers.js';
 
 class Digit extends HTMLElement {
     constructor(){
