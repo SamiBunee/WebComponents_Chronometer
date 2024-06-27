@@ -6,29 +6,28 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Chronometer - WebComponents</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <script type="module" src= "./components/main.js"></script>
+    <script type="module" src= "./components/Main.js"></script>
 </head>
 
 <body>
     <wc-digit-container>
-
-        <wc-digit></wc-digit>
-        <wc-digit></wc-digit>
-
-        <wc-dots></wc-dots>
-
-        <wc-digit></wc-digit>
-        <wc-digit></wc-digit>
+        <wc-digit id = "tensHours" number = "0"></wc-digit>
+        <wc-digit id = "unitsHours" number = "0"></wc-digit>
 
         <wc-dots></wc-dots>
 
-        <wc-digit></wc-digit>
-        <wc-digit></wc-digit>
+        <wc-digit id = "tensMinutes" number = "0"></wc-digit>
+        <wc-digit id = "unitsMinutes" number = "0"></wc-digit>
+
+        <wc-dots></wc-dots>
+
+        <wc-digit id = "tensSeconds" number = "0"></wc-digit>
+        <wc-digit id = "unitsSeconds" number = "0"></wc-digit>
 
         <wc-dots></wc-dots>
         
-        <wc-digit></wc-digit>
-        <wc-digit></wc-digit>
+        <wc-digit id = "tensSplitSeconds" number = "0"></wc-digit>
+        <wc-digit id = "unitsSplitSeconds" number = "0"></wc-digit>
     </wc-digit-container>
 </body>
 

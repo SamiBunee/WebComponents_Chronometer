@@ -12,9 +12,6 @@ class Digit extends HTMLElement {
 
     connectedCallback(){
         this.number = 0;
-        setInterval(() => {
-            this.advance(this.number);
-        }, 100);
     }
 
     get number(){
