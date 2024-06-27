@@ -5,18 +5,19 @@ class DigitContainer extends HTMLElement {
         super();
         let shadowRoot = this.attachShadow({mode: 'open'});
         shadowRoot.innerHTML = `<style>${style}</style>` + '<slot></slot>';
-        this.counter = 0;
+        this.updateTime = this.updateTime.bind(this);
     }
 
     connectedCallback() {
-        setInterval(() => {
-            this.counter++;
-            this.updateTime();
-        }, 10)
+        document.body.addEventListener('updateTime', this.updateTime);
     }
 
-    updateTime(){
-        let time = this.timeFormatter(this.counter);
+    disconnectedCallback(){
+        document.body.removeEventListener('updateTime', this.updateTime);
+    }
+
+    updateTime(event){
+        let time = this.timeFormatter(event.detail.counter);
 
         this.querySelector('#tensHours').number = Math.floor(time.hours/10);
         this.querySelector('#unitsHours').number = Math.floor(time.hours%10);
@@ -37,7 +38,7 @@ class DigitContainer extends HTMLElement {
         milliSeconds = counter % 10;
         splitSeconds = Math.floor((counter % 100) / 10);
         seconds = Math.floor((counter/ 100) % 60);
-        minutes = Math.floor(counter/ 100 / 60);
+        minutes = Math.floor((counter/ 100 / 60) % 60);
         hours = Math.floor(counter / 100 / 3600)
 
         return {hours, minutes, seconds, splitSeconds, milliSeconds}
