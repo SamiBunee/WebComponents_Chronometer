@@ -10,34 +10,27 @@
 </head>
 
 <body>
-    <wc-digit-container>
-        <wc-digit id = "tensHours" number = "0"></wc-digit>
-        <wc-digit id = "unitsHours" number = "0"></wc-digit>
-
-        <wc-dots></wc-dots>
-
-        <wc-digit id = "tensMinutes" number = "0"></wc-digit>
-        <wc-digit id = "unitsMinutes" number = "0"></wc-digit>
-
-        <wc-dots></wc-dots>
-
-        <wc-digit id = "tensSeconds" number = "0"></wc-digit>
-        <wc-digit id = "unitsSeconds" number = "0"></wc-digit>
-
-        <wc-dots></wc-dots>
-        
-        <wc-digit id = "tensSplitSeconds" number = "0"></wc-digit>
-        <wc-digit id = "unitsSplitSeconds" number = "0"></wc-digit>
-    </wc-digit-container>
-
-    <wc-button title="Start"></wc-button>
-    <wc-button title="Restart"></wc-button>
-
-    <script>
-        window.addEventListener('customClick', (event)=>{
-            console.log(event.detail.title);
-        })
-    </script>
+    <wc-chrono>
+        <wc-digit-container>
+            <wc-digit id = "tensHours" number = "0"></wc-digit>
+            <wc-digit id = "unitsHours" number = "0"></wc-digit>
+    
+            <wc-dots></wc-dots>
+    
+            <wc-digit id = "tensMinutes" number = "0"></wc-digit>
+            <wc-digit id = "unitsMinutes" number = "0"></wc-digit>
+    
+            <wc-dots></wc-dots>
+    
+            <wc-digit id = "tensSeconds" number = "0"></wc-digit>
+            <wc-digit id = "unitsSeconds" number = "0"></wc-digit>
+    
+            <wc-dots></wc-dots>
+            
+            <wc-digit id = "tensSplitSeconds" number = "0"></wc-digit>
+            <wc-digit id = "unitsSplitSeconds" number = "0"></wc-digit>
+        </wc-digit-container>
+    </wc-chrono>
 </body>
 
 </html>
