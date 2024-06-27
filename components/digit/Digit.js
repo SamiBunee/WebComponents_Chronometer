@@ -1,6 +1,6 @@
-import style from './styles.js';
-import html from './template.js';
-import numbers from './numbers.js';
+import style from './Styles.js';
+import html from './Template.js';
+import numbers from './Numbers.js';
 
 class Digit extends HTMLElement {
     constructor(){
@@ -12,9 +12,6 @@ class Digit extends HTMLElement {
 
     connectedCallback(){
         this.number = 0;
-        setInterval(() => {
-            this.advance(this.number);
-        }, 100);
     }
 
     get number(){
